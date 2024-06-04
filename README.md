@@ -1,3 +1,5 @@
+//npm install react-router-dom axios react-i18next i18next i18next-browser-languagedetector
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
