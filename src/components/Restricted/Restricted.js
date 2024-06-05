@@ -1,6 +1,6 @@
-// src/components/Restricted.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../Restricted/Restricted.css';
 
 const Restricted = () => {
   const user = JSON.parse(localStorage.getItem('user'));
@@ -12,7 +12,7 @@ const Restricted = () => {
   }
 
   return (
-    <div>
+    <div className='restricted'>
       <h2>Restricted Page</h2>
       <p>This page is only accessible by managers.</p>
     </div>

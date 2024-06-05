@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import '../Login/Login.css';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -26,22 +27,22 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>{t('Login')}</h2>
-      {error && <p>{error}</p>}
+    <div className='login'>
+      <h2>{t('Login')}</h2>     
       <form onSubmit={handleLogin}>
-        <div>
+        <div className='form-group'>
           <label>{t('Username')}</label>
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-        </div>
-        <div>
           <label>{t('Password')}</label>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <button type="submit">{t('Login')}</button>
+        {error && <p className="error">{error}</p>}
+        <button className='login-button' type="submit">{t('Login')}</button>
       </form>
-      <button onClick={() => changeLanguage('en')}>{t('English')}</button>
-      <button onClick={() => changeLanguage('zh')}>{t('Mandarin')}</button>
+      <div className='language-buttons'>
+        <button onClick={() => changeLanguage('en')}>{t('English')}</button>
+        <button onClick={() => changeLanguage('zh')}>{t('Mandarin')}</button>
+      </div>
     </div>
   );
 };
