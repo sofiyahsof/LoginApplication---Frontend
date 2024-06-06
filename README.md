@@ -2,7 +2,7 @@
 
 1. Create a directory for the project
 2. cd to the project directory
-3. Clone the repository: `git clone`
+3. Clone the repository: `git clone https://github.com/sofiyahsof/LoginApplication---Frontend.git`
 4. run `npm install`
 5. run `npm start`
 
